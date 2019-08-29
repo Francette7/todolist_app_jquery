@@ -32,9 +32,12 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
-	$(document).on('click', function() {
+	$('body').on('click', function() {
 		contLogin.hide();
 		contSingup.hide();
 	});
+
+	delt = $('.fa fa-trash-o')
+
 
 });

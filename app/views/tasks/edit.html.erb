@@ -1,4 +1,4 @@
-<h4>Edit your task</h4>
+<h4>Edit your task</h4>	
 <%= form_tag(task_path, method: "put") do %>
   <div class="form-group">
       <%= label_tag("Your task:") %>
@@ -11,4 +11,5 @@
   </div>
     <%= submit_tag("Edit task", class: "btn btn-info") %>
 <% end %>
+
 <%= link_to "Delete this task", task_path(@task), method: :delete, class: "btn btn-danger" %>

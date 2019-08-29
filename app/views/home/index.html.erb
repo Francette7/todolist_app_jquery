@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <h1 class="text-center mb-4">Welcome to my todolist app</h1>
 <%= render 'layouts/task_form'  %>
 <div class="container">
@@ -6,13 +8,14 @@
 
   <li class="category-title" style="cursor: pointer;"><%= category.title  %></li>
   <div class="card">
-    <ul>
+    <ul id="<%=category.title%>">
       <% category.tasks.each do |task|  %>
       <li>
         <%= task.title  %>
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
         <% end %>
+        <i class="fa fa-trash-o"></i>
       </li>
       <% end %>
     </ul>
@@ -20,6 +23,8 @@
   <% end %>
   </ul>
 </div>
+
+
 
 <div class="container">
   <div class="row">
